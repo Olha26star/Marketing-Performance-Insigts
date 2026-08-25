@@ -19,3 +19,5 @@ Analyzed customer volume and revenue trends to identify changes in marketing per
 Identified underperforming channels that may require optimization or a revised marketing strategy.
 Enabled data-driven marketing budget allocation by providing a clear view of channel and category performance.
 Supported more targeted marketing strategies by showing which products and channels contribute most to overall revenue.
+## Tools & Technologies
+Tableau & BigQuery
