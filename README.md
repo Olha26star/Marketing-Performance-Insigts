@@ -9,3 +9,4 @@ The analysis aimed to understand:
 -which product categories generate the largest share of revenue within each channel;
 -which channels have the greatest potential for further scaling;
 -where marketing resources may be used less efficiently.
+<img width="1507" height="1002" alt="image" src="https://github.com/user-attachments/assets/dc96edbb-e138-468d-931a-ab940ef438e4" />
