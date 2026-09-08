@@ -3,12 +3,12 @@
 Which marketing channels and product categories generate the most revenue, customers, and value per transaction, and where should marketing resources be concentrated to improve overall performance?
 ## My Task
 The analysis aimed to understand:
--which marketing channels generate the highest revenue;
--which channels attract the most customers;
--which channels have the highest AOV (Average Order Value);
--which product categories generate the largest share of revenue within each channel;
--which channels have the greatest potential for further scaling;
--where marketing resources may be used less efficiently.
+- which marketing channels generate the highest revenue;
+- which channels attract the most customers;
+- which channels have the highest AOV (Average Order Value);
+- which product categories generate the largest share of revenue within each channel;
+- which channels have the greatest potential for further scaling;
+- where marketing resources may be used less efficiently.
 <img width="1507" height="1002" alt="image" src="https://github.com/user-attachments/assets/dc96edbb-e138-468d-931a-ab940ef438e4" />
 https://public.tableau.com/views/MARKETINGPERFORMANCEINSIGHTS_17852977520940/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 ## What was solved
