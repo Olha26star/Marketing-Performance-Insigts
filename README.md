@@ -21,5 +21,55 @@ https://public.tableau.com/views/MARKETINGPERFORMANCEINSIGHTS_17852977520940/Das
 - Identified underperforming channels that may require optimization or a revised marketing strategy.
 - Enabled data-driven marketing budget allocation by providing a clear view of channel and category performance.
 - Supported more targeted marketing strategies by showing which products and channels contribute most to overall revenue.
+ 
 ## Tools & Technologies
-Tableau & BigQuery
+Tableau & SQL(Google BigQuery)
+SELECT
+    transactions.transaction_id,
+    DATE(transactions.timestamp) AS transaction_date,
+    DATE_TRUNC(DATE(transactions.timestamp), MONTH) AS transaction_month,
+
+    transactions.customer_id,
+    transactions.product_id,
+    transactions.campaign_id,
+
+    campaigns.channel AS campaign_channel,
+    campaigns.objective AS campaign_objective,
+    campaigns.target_segment AS campaign_target_segment,
+    campaigns.expected_uplift,
+
+    products.category AS product_category,
+    products.brand AS product_brand,
+    products.base_price,
+    products.is_premium,
+
+    transactions.quantity,
+    transactions.gross_revenue,
+
+    SAFE_DIVIDE(
+        transactions.gross_revenue,
+        transactions.quantity
+    ) AS revenue_per_unit_row,
+
+    CASE
+        WHEN transactions.quantity > 0 THEN TRUE
+        ELSE FALSE
+    END AS is_valid_quantity,
+
+    CASE
+        WHEN transactions.gross_revenue > 0 THEN TRUE
+        ELSE FALSE
+    END AS is_positive_revenue
+
+FROM `adroit-lantern-458719-q4.Analytics_Dataset.transactions` AS transactions
+LEFT JOIN `adroit-lantern-458719-q4.Analytics_Dataset.products` AS products
+    ON transactions.product_id = products.product_id
+LEFT JOIN `adroit-lantern-458719-q4.Analytics_Dataset.campaigns` AS campaigns
+    ON transactions.campaign_id = campaigns.campaign_id
+
+WHERE transactions.transaction_id IS NOT NULL
+    AND transactions.customer_id IS NOT NULL
+    AND transactions.product_id IS NOT NULL
+    AND transactions.gross_revenue IS NOT NULL
+    AND transactions.quantity IS NOT NULL;
+
