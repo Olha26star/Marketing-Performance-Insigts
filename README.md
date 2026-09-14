@@ -63,7 +63,6 @@ SELECT
         WHEN transactions.gross_revenue > 0 THEN TRUE
         ELSE FALSE
     END AS is_positive_revenue
-
 FROM
     `adroit-lantern-458719-q4.Analytics_Dataset.transactions`
     AS transactions
@@ -84,3 +83,8 @@ WHERE
     AND transactions.product_id IS NOT NULL
     AND transactions.gross_revenue IS NOT NULL
     AND transactions.quantity IS NOT NULL;
+
+    **о
+
+
+
