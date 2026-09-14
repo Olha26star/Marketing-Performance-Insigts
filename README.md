@@ -7,7 +7,9 @@ The goal was to understand the key drivers of revenue, identify changes in chann
 
 ## Business Problem
 The business maintained relatively stable revenue and customer volume between 2021 and 2023, but this stability did not translate into clear growth.
+
 At the same time, AOV declined from $93 to $91, while revenue per unit decreased from $67 to $66.
+
 The business needed to understand what was driving revenue, how marketing channel performance was changing, and where opportunities existed to increase customer value and support future growth.
 ## My Task
 The analysis aimed to understand:
