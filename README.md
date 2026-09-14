@@ -25,13 +25,10 @@ https://public.tableau.com/views/MARKETINGPERFORMANCEINSIGHTS_17852977520940/Das
 ## Tools & Technologies
 Tableau & SQL(Google BigQuery)
 
--SELECT
+SELECT
     transactions.transaction_id,
     DATE(transactions.timestamp) AS transaction_date,
-    DATE_TRUNC(
-        DATE(transactions.timestamp),
-        MONTH
-    ) AS transaction_month,
+    DATE_TRUNC(DATE(transactions.timestamp), MONTH) AS transaction_month,
 
     transactions.customer_id,
     transactions.product_id,
@@ -64,28 +61,15 @@ Tableau & SQL(Google BigQuery)
         WHEN transactions.gross_revenue > 0 THEN TRUE
         ELSE FALSE
     END AS is_positive_revenue
--FROM
-    `adroit-lantern-458719-q4.Analytics_Dataset.transactions`
-    AS transactions
 
--LEFT JOIN
-    `adroit-lantern-458719-q4.Analytics_Dataset.products`
-    AS products
+FROM `adroit-lantern-458719-q4.Analytics_Dataset.transactions` AS transactions
+LEFT JOIN `adroit-lantern-458719-q4.Analytics_Dataset.products` AS products
     ON transactions.product_id = products.product_id
-
--LEFT JOIN
-    `adroit-lantern-458719-q4.Analytics_Dataset.campaigns`
-    AS campaigns
+LEFT JOIN `adroit-lantern-458719-q4.Analytics_Dataset.campaigns` AS campaigns
     ON transactions.campaign_id = campaigns.campaign_id
 
--WHERE
-    transactions.transaction_id IS NOT NULL
+WHERE transactions.transaction_id IS NOT NULL
     AND transactions.customer_id IS NOT NULL
     AND transactions.product_id IS NOT NULL
     AND transactions.gross_revenue IS NOT NULL
     AND transactions.quantity IS NOT NULL;
-
-    **о
-
-
-
