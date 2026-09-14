@@ -21,7 +21,7 @@ How did channel and product performance change between 2021 and 2023?<br>
 Where are the main opportunities to increase customer value and support future revenue growth?<br>
 
 ## Analysis Tasks
-The analysis aimed to understand:
+The analysis aimed to understand:<br>
 Compared revenue, customer volume, AOV and revenue per unit across 2021–2023.<br>
 Analyzed revenue and units sold by marketing channel.<br>
 Compared AOV and revenue per unit across marketing channels.<br>
