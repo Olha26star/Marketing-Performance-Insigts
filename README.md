@@ -24,7 +24,8 @@ https://public.tableau.com/views/MARKETINGPERFORMANCEINSIGHTS_17852977520940/Das
  
 ## Tools & Technologies
 Tableau & SQL(Google BigQuery)
-SELECT
+
+-SELECT
     transactions.transaction_id,
     DATE(transactions.timestamp) AS transaction_date,
     DATE_TRUNC(
@@ -63,21 +64,21 @@ SELECT
         WHEN transactions.gross_revenue > 0 THEN TRUE
         ELSE FALSE
     END AS is_positive_revenue
-FROM
+-FROM
     `adroit-lantern-458719-q4.Analytics_Dataset.transactions`
     AS transactions
 
-LEFT JOIN
+-LEFT JOIN
     `adroit-lantern-458719-q4.Analytics_Dataset.products`
     AS products
     ON transactions.product_id = products.product_id
 
-LEFT JOIN
+-LEFT JOIN
     `adroit-lantern-458719-q4.Analytics_Dataset.campaigns`
     AS campaigns
     ON transactions.campaign_id = campaigns.campaign_id
 
-WHERE
+-WHERE
     transactions.transaction_id IS NOT NULL
     AND transactions.customer_id IS NOT NULL
     AND transactions.product_id IS NOT NULL
