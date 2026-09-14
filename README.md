@@ -84,3 +84,5 @@ WHERE
     AND transactions.product_id IS NOT NULL
     AND transactions.gross_revenue IS NOT NULL
     AND transactions.quantity IS NOT NULL;
+
+    
