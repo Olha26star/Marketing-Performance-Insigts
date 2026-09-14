@@ -1,6 +1,14 @@
 # Marketing-Performance-Insigts
-## Business Questions Addressed
-Which marketing channels and product categories generate the most revenue, customers, and value per transaction, and where should marketing resources be concentrated to improve overall performance?
+This project analyzes the marketing and sales performance of a multi-category e-commerce business from 2021 to 2023.
+
+The analysis focuses on revenue, customer volume, AOV, revenue per unit, marketing channels, sales volume, and product category performance.
+
+The goal was to understand the key drivers of revenue, identify changes in channel and product performance over time, and find opportunities to support future revenue growth.
+
+## Business Problem
+The business maintained relatively stable revenue and customer volume between 2021 and 2023, but this stability did not translate into clear growth.
+At the same time, AOV declined from $93 to $91, while revenue per unit decreased from $67 to $66.
+The business needed to understand what was driving revenue, how marketing channel performance was changing, and where opportunities existed to increase customer value and support future growth.
 ## My Task
 The analysis aimed to understand:
 - which marketing channels generate the highest revenue;
